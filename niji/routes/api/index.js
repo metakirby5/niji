@@ -1,6 +1,9 @@
 var express = require('express');
 var multer = require('multer');
 
+var Theme = require('../../models/theme');
+var Suite = require('../../models/suite');
+
 var router = express.Router();
 var screenshotStorage =   multer.diskStorage({
   destination: function (req, file, callback) {
