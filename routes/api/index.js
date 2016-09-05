@@ -1,6 +1,5 @@
 var express = require('express');
 var multer = require('multer');
-var mmm = require('mmmagic');
 
 var router = express.Router();
 var storage =   multer.diskStorage({
@@ -11,13 +10,17 @@ var storage =   multer.diskStorage({
     callback(null, req.body.name);
   }
 });
-var upload = multer({storage : storage}).single('screenshot');
-var Magic = mmm.Magic;
-var magic = new Magic(mmm.MAGIC_MIME_TYPE);
-// magic.detectFile('example.png', function(err, result) {
-//     if (err) throw err;
-//     console.log(result);
-// });
+var upload = multer({
+  storage: storage,
+  fileFilter: function(req, file, callback){
+    if(file.mimetype.match(/image\/.+/)){
+      callback(null, true);
+    }
+    else{
+      callback(null, false);
+    }
+  }
+}).single('screenshot');
 
 var authRoutes = require('./auth');
 
@@ -39,12 +42,33 @@ router.post('/theme', function(req, res, next){
   });
   if(req.body.screenshot){
     upload(req, res, function(err){
-      res.status(404).json({
+      if(err){
+        res.status(404).json({
+          title: 'An error occurred',
+          error: err
+        });
+      }
+    });
+  }
+  var theme = new Theme({
+    name: req.body.name,
+    description: req.body.description,
+    target: req.body.target,
+    tags: req.body.tags,
+    yaml: req.body.yaml
+  });
+  theme.save(function(err, result){
+    if(err){
+      return res.status(404).json({
         title: 'An error occurred',
         error: err
       });
+    }
+    res.status(201).json({
+      message: 'Saved theme',
+      obj: result
     });
-  }
+  });
 });
 
 module.exports = router;
