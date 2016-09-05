@@ -21,6 +21,10 @@ var themeSchema = new Schema({
     type: String[],
     required: false
   }
+  yaml: {
+    type: String,
+    required: true
+  }
   // author: {
   //   type: mongoose.Schema.Types.ObjectId,
   //   ref: 'User',
