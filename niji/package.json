@@ -1,0 +1,30 @@
+{
+  "name": "niji",
+  "version": "1.0.0",
+  "description": "YAML theme repo for use with zenbu.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metakirby5/niji.git"
+  },
+  "keywords": [
+    "niji",
+    "zenbu",
+    "YAML",
+    "theme",
+    "repo"
+  ],
+  "author": "Ethan Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metakirby5/niji/issues"
+  },
+  "homepage": "https://github.com/metakirby5/niji#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.9"
+  }
+}
