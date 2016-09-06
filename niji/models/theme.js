@@ -1,8 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var connection = mongoose.createConnection("mongodb://localhost/niji");
-
 var themeSchema = new Schema({
   name: {
     type: String,
