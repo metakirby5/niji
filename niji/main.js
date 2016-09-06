@@ -10,10 +10,6 @@ var apiRoutes = require('./routes/api');
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'app/prod/hbs'));
-app.set('view engine', 'hbs');
-
 // app.use(favicon(path.join(__dirname, 'app/prod/img', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());

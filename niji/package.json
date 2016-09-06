@@ -24,20 +24,15 @@
   },
   "homepage": "https://github.com/metakirby5/niji#readme",
   "dependencies": {
-    "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.6",
-    "cookie-parser": "^1.4.3",
     "core-js": "^2.4.0",
     "debug": "^2.2.0",
     "es6-shim": "^0.35.1",
     "express": "^4.14.0",
     "graceful-fs": "^4.1.6",
-    "hbs": "^4.0.0",
     "lodash": "^4.15.0",
     "minimatch": "^3.0.3",
     "mongoose": "^4.4.12",
-    "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.27"
   }
 }
