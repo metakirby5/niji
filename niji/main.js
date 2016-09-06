@@ -10,18 +10,12 @@ var apiRoutes = require('./routes/api');
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'app/prod/hbs'));
-app.set('view engine', 'hbs');
-
 // app.use(favicon(path.join(__dirname, 'app/prod/img', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'app/prod/')));
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');

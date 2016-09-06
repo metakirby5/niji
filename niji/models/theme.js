@@ -1,8 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var connection = mongoose.createConnection("mongodb://localhost/niji");
-
 var themeSchema = new Schema({
   name: {
     type: String,
@@ -15,7 +13,7 @@ var themeSchema = new Schema({
   target: {
     // urxvt, xterm, termite, etc.
     type: String,
-    required: false
+    required: true
   },
   tags: {
     type: String[],

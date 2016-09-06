@@ -3,8 +3,6 @@ var Schema = mongoose.Schema;
 
 var Theme = require('./theme');
 
-var connection = mongoose.createConnection("mongodb://localhost/niji");
-
 var suiteSchema = new Schema({
   name: {
     type: String,
