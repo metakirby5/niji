@@ -25,14 +25,11 @@
   "homepage": "https://github.com/metakirby5/niji#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "core-js": "^2.4.0",
     "debug": "^2.2.0",
-    "es6-shim": "^0.35.1",
     "express": "^4.14.0",
     "graceful-fs": "^4.1.6",
     "lodash": "^4.15.0",
     "minimatch": "^3.0.3",
-    "mongoose": "^4.4.12",
-    "systemjs": "0.19.27"
+    "mongoose": "^4.4.12"
   }
 }
