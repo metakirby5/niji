@@ -55,16 +55,6 @@ router.post('/suite', function(req, res, next){
       });
     }
   });
-  if(req.body.wallpaper){
-    upload(req, res, function(err){
-      if(err){
-        res.status(404).json({
-          title: 'An error occurred',
-          error: err
-        });
-      }
-    });
-  }
   var suite = new Suite({
     name: req.body.name,
     description: req.body.description,
