@@ -5,29 +5,29 @@ Theme = require './theme'
 
 suiteSchema = new Schema
   name:
-    type: String,
+    type: String
     required: true
   description:
-    type: String,
+    type: String
     required: true
   wallpaper:
-    type: String,
+    type: String
     required: false
   screenshot:
-    type: String,
+    type: String
     required: false
   tags:
-    type: String[],
+    type: String[]
     required: false
   themes:
-    type: mongoose.Schema.Types.ObjectId[],
-    ref: 'Theme',
+    type: mongoose.Schema.Types.ObjectId[]
+    ref: 'Theme'
     required: true
   # creator:
-  #   type: mongoose.Schema.Types.ObjectId,
-  #   ref: 'User',
+  #   type: mongoose.Schema.Types.ObjectId
+  #   ref: 'User'
   #   required: true
   #
   ## This is commented out until we have a User schema
 
-module.exports = connection.model 'Suite' suiteSchema
+module.exports = connection.model 'Suite', suiteSchema

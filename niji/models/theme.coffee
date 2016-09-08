@@ -24,4 +24,4 @@ themeSchema = new Schema
   #   required: true
   ## This is commented out until we have a User schema
 
-module.exports = connection.model 'Theme' themeSchema
+module.exports = connection.model 'Theme', themeSchema
