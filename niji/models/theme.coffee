@@ -3,24 +3,24 @@ Schema = mongoose.Schema
 
 themeSchema = new Schema
   name:
-    type: String,
+    type: String
     required: true
   description:
-    type: String,
+    type: String
     required: true
   target:
     # urxvt, xterm, termite, etc.
-    type: String,
+    type: String
     required: true
   tags:
-    type: String[],
+    type: String[]
     required: false
   yaml:
-    type: String,
+    type: String
     required: true
   # author:
   #   type: mongoose.Schema.Types.ObjectId,
-  #   ref: 'User',
+  #   ref: 'User'
   #   required: true
   ## This is commented out until we have a User schema
 
