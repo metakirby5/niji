@@ -1,0 +1,27 @@
+{
+  "name": "niji",
+  "description": "zenbu theme repo",
+  "main": "bin/www",
+  "authors": [
+    "Ethan Chan"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "niji",
+    "zenbu",
+    "YAML",
+    "theme",
+    "repo"
+  ],
+  "homepage": "https://github.com/metakirby5/niji",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "^2.0.4"
+  }
+}

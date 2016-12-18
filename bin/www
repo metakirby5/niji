@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+// The main server executable. You shouldn't touch this.
+require('coffee-script/register');
+
+const config = require('../config');
+const server = require('../server');
+
+server.listen(config.ports.server, () => {
+  console.log(`Server listening at ${config.ports.server}...`);
+});
